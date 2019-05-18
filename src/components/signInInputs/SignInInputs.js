@@ -1,33 +1,32 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import Inputs from '../inputs/Inputs';
+import React, { Component } from "react";
+import { Text, View } from "react-native";
+import Inputs from "../inputs/Inputs";
 
 class SignInInputs extends Component {
   render() {
     return (
-      <View>
-        <Inputs
-          properties={[
-            {
-              inputProps: {
-                placeholder: 'User Email...'
-              },
-              itemProps: {
-                rounded: 'true'
-              }
+      <Inputs
+        properties={[
+          {
+            inputProps: {
+              name: "email",
+              placeholder: "User Email..."
             },
-            {
-              inputProps: {
-                placeholder: 'User Password...',
-                secureTextEntry: 'true'
-              },
-              itemProps: {
-                rounded: 'true'
-              }
+            itemProps: {
+              rounded: "true"
             }
-          ]}
-        />
-      </View>
+          },
+          {
+            inputProps: {
+              name: "password",
+              placeholder: "User Password..."
+            },
+            itemProps: {
+              rounded: "true"
+            }
+          }
+        ]}
+      />
     );
   }
 }

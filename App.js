@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Platform,
   StyleSheet,
@@ -7,22 +7,23 @@ import {
   TouchableOpacity,
   ImageBackground,
   ScrollView
-} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { Button } from 'native-base';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+} from "react-native";
+
+import Ionicons from "react-native-vector-icons/Ionicons";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+import { Button } from "native-base";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 //CUSTOM IMPORTS
-import SignIn from './src/screens/SignIn/SignIn';
+import SignIn from "./src/screens/SignIn/SignIn";
 
-import backgroundLogin from './src/assets/background-image.jpg';
+import backgroundLogin from "./src/assets/background-image.jpg";
 
 const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
   android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu'
+    "Double tap R on your keyboard to reload,\n" +
+    "Shake or press menu button for dev menu"
 });
 
 type Props = {};
@@ -31,18 +32,16 @@ export default class App extends Component<Props> {
     return (
       <KeyboardAwareScrollView
         contentContainerStyle={{ flexGrow: 1 }}
-        scrollEnabled
-      >
+        scrollEnabled>
         <ImageBackground
           source={backgroundLogin}
-          resizeMode='cover'
-          style={styles.container}
-        >
+          resizeMode="cover"
+          style={styles.container}>
           <Ionicons
             style={styles.logo}
-            name='ios-contact'
+            name="ios-contact"
             size={120}
-            color='#fff'
+            color="#fff"
           />
           <SignIn />
 
@@ -54,98 +53,91 @@ export default class App extends Component<Props> {
             </View>
             <View
               style={{
-                flexDirection: 'row'
-              }}
-            >
+                flexDirection: "row"
+              }}>
               <TouchableOpacity
                 style={{
-                  backgroundColor: '#3b5998',
+                  backgroundColor: "#3b5998",
                   width: 45,
                   height: 45,
                   borderRadius: 90,
                   padding: 5,
-                  alignItems: 'center',
-                  justifyContent: 'flex-end',
+                  alignItems: "center",
+                  justifyContent: "flex-end",
                   marginLeft: 10,
                   marginRight: 10
-                }}
-              >
-                <FontAwesome name={'facebook-f'} size={30} color='#fff' />
+                }}>
+                <FontAwesome name={"facebook-f"} size={30} color="#fff" />
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={{
-                  backgroundColor: '#fff',
+                  backgroundColor: "#fff",
                   width: 45,
                   height: 45,
                   borderRadius: 90,
                   padding: 5,
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  alignItems: "center",
+                  justifyContent: "center",
                   marginLeft: 10,
                   marginRight: 10
-                }}
-              >
-                <FontAwesome name={'github-alt'} size={30} color='#333' />
+                }}>
+                <FontAwesome name={"github-alt"} size={30} color="#333" />
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={{
-                  backgroundColor: '#DB4437',
+                  backgroundColor: "#DB4437",
                   width: 45,
                   height: 45,
                   borderRadius: 90,
                   padding: 5,
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  alignItems: "center",
+                  justifyContent: "center",
                   marginLeft: 10,
                   marginRight: 10
-                }}
-              >
-                <FontAwesome name={'google'} size={30} color='#fff' />
+                }}>
+                <FontAwesome name={"google"} size={30} color="#fff" />
               </TouchableOpacity>
             </View>
           </View>
 
-          <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: "row" }}>
             <View
               style={{
-                backgroundColor: 'white',
+                backgroundColor: "white",
                 height: 2,
                 flex: 1,
-                alignSelf: 'center'
+                alignSelf: "center"
               }}
             />
             <Text
               style={{
-                color: 'white',
-                alignSelf: 'center',
+                color: "white",
+                alignSelf: "center",
                 paddingHorizontal: 5,
                 fontSize: 24
-              }}
-            >
+              }}>
               OR
             </Text>
             <View
               style={{
-                backgroundColor: 'white',
+                backgroundColor: "white",
                 height: 2,
                 flex: 1,
-                alignSelf: 'center'
+                alignSelf: "center"
               }}
             />
           </View>
           <Button
             style={{ marginTop: 15, paddingHorizontal: 5 }}
             block
-            transparent
-          >
+            transparent>
             <Text
               style={{
                 fontSize: 24,
-                color: '#FFF'
-              }}
-            >
+                color: "#FFF"
+              }}>
               Sign Up!
             </Text>
           </Button>
@@ -160,8 +152,8 @@ const styles = StyleSheet.create({
     flex: 1,
     width: null,
     height: null,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
 
   logo: {
@@ -169,15 +161,15 @@ const styles = StyleSheet.create({
   },
 
   socialNetworksContainer: {
-    width: '100%',
+    width: "100%",
     padding: 20,
-    backgroundColor: 'rgba(0, 0, 0, 0.2)',
-    flexDirection: 'column',
-    alignItems: 'center'
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
+    flexDirection: "column",
+    alignItems: "center"
   },
 
   socialNetworks: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 18,
     marginBottom: 15
   }
