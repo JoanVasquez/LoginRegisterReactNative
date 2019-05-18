@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { RkButton } from 'react-native-ui-kitten';
+import Inputs from '../inputs/Inputs';
 
 class SignInInputs extends Component {
   render() {
     return (
       <View>
-        <Text style={{ color: '#fff' }}> textInComponent </Text>
+        <Inputs
+          properties={[
+            {
+              inputProps: {
+                placeholder: 'User Email...'
+              },
+              itemProps: {
+                rounded: 'true'
+              }
+            },
+            {
+              inputProps: {
+                placeholder: 'User Password...',
+                secureTextEntry: 'true'
+              },
+              itemProps: {
+                rounded: 'true'
+              }
+            }
+          ]}
+        />
       </View>
     );
   }
