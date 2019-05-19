@@ -17,7 +17,6 @@ class Inputs extends Component {
         )
       );
     }
-    console.log(items);
     return items;
   }
 }
